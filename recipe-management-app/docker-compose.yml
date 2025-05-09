@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/recipe_db
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=recipe_db
+
+  web:
+    build:
+      context: ./web-frontend
+    volumes:
+      - ./web-frontend:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  desktop:
+    build:
+      context: ./desktop-frontend
+    volumes:
+      - ./desktop-frontend:/app
+    ports:
+      - "5000:5000"
+
+volumes:
+  db_data:

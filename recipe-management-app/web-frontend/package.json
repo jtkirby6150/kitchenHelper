@@ -1,0 +1,28 @@
+{
+  "name": "recipe-management-app",
+  "version": "1.0.0",
+  "description": "A cross-platform recipe management application.",
+  "main": "src/main.js",
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "vue": "^3.2.0",
+    "vue-router": "^4.0.0",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "vite": "^2.0.0",
+    "eslint": "^7.0.0",
+    "eslint-plugin-vue": "^7.0.0"
+  },
+  "keywords": [
+    "recipe",
+    "management",
+    "app"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
