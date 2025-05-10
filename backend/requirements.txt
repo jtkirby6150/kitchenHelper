@@ -1,0 +1,12 @@
+# filepath: /home/jkirby/Desktop/Kirbys Recipe App/backend/requirements.txt
+fastapi
+uvicorn
+sqlalchemy
+pydantic[email]
+python-dotenv
+redis
+fastapi-limiter
+fastapi-pagination
+passlib[bcrypt]
+pyjwt
+python-multipart
