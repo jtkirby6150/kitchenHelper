@@ -6,6 +6,7 @@ import RecipeDetailsPage from "./views/RecipeDetailsPage.vue";
 import AdminDashboard from "./views/AdminDashboard.vue";
 import RecipeSubmissionPage from "./views/RecipeSubmissionPage.vue";
 import NotificationsPage from "./views/NotificationsPage.vue";
+import RecipeListPage from "./views/RecipeListPage.vue";
 
 const routes = [
   { path: "/", component: HomePage },
@@ -15,6 +16,7 @@ const routes = [
   { path: "/admin", component: AdminDashboard },
   { path: "/submit-recipe", component: RecipeSubmissionPage },
   { path: "/notifications", component: NotificationsPage },
+  { path: "/recipes", component: RecipeListPage },
 ];
 
 const router = createRouter({
